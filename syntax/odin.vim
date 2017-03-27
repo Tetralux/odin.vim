@@ -10,6 +10,7 @@ syntax keyword odinVector vector
 
 syntax keyword odinStruct struct
 syntax keyword odinEnum enum
+syntax keyword odinUnion union
 
 syntax keyword odinIf if
 syntax keyword odinThen then
@@ -102,6 +103,7 @@ highlight link odinString String
 
 highlight link odinStruct Structure
 highlight link odinEnum Structure
+highlight link odinUnion Structure
 
 highlight link odinFunction Function
 highlight link odinDynamicFunction Function
