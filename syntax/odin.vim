@@ -48,7 +48,7 @@ syntax match odinClass "\v<[A-Z]\w+>" display
 syntax match odinConstant "\v<[A-Z0-9,_]+>" display
 syntax match odinRange "\.\." display
 syntax match odinIncrement "++" display
-syntax match odinIncrement "--" display
+syntax match odinDecrement "--" display
 syntax match odinDeclaration "\:\:\?" display
 syntax match odinDeclAssign ":=" display
 syntax match odinReturnOp "->" display
