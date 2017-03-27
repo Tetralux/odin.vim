@@ -46,8 +46,9 @@ syntax match odinTagNote "@\<\w\+\>" display
 
 syntax match odinClass "\v<[A-Z]\w+>" display
 syntax match odinConstant "\v<[A-Z0-9,_]+>" display
-syntax match odinRange "\.\.\." display
-syntax match odinRangeEx "\.\.<" display
+syntax match odinRange "\.\." display
+syntax match odinIncrement "++" display
+syntax match odinIncrement "--" display
 syntax match odinDeclaration "\:\:\?" display
 syntax match odinDeclAssign ":=" display
 syntax match odinReturnOp "->" display
@@ -85,13 +86,14 @@ highlight link odinAlignOf Keyword
 highlight link odinDefer Operator
 highlight link odinDynamic Operator
 highlight link odinRange Operator
-highlight link odinRangeEx Operator
 highlight link odinAssign Operator
 highlight link odinAddressOf Operator
 
 highlight link odinDeclaration Operator
 highlight link odinDeclAssign Operator
 highlight link odinAssign Operator
+highlight link odinIncrement Operator
+highlight link odinDecrement Operator
 highlight link odinReturnOp Operator
 highlight link odinInline Keyword
 highlight link odinNoInline Keyword
