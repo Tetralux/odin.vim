@@ -49,6 +49,7 @@ syntax match odinConstant "\v<[A-Z0-9,_]+>" display
 syntax match odinRange "\.\." display
 syntax match odinIncrement "++" display
 syntax match odinDecrement "--" display
+syntax match odinTernaryQMark "?" display
 syntax match odinDeclaration "\:\:\?" display
 syntax match odinDeclAssign ":=" display
 syntax match odinReturnOp "->" display
@@ -94,6 +95,7 @@ highlight link odinDeclAssign Operator
 highlight link odinAssign Operator
 highlight link odinIncrement Operator
 highlight link odinDecrement Operator
+highlight link odinTernaryQMark Operator
 highlight link odinReturnOp Operator
 highlight link odinInline Keyword
 highlight link odinNoInline Keyword
