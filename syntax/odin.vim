@@ -18,6 +18,7 @@ syntax keyword odinElse else
 syntax keyword odinFor for
 syntax keyword odinMatch match
 syntax keyword odinCase case
+syntax keyword odinDefault default
 syntax keyword odinContinue continue
 syntax keyword odinBreak break
 syntax keyword odinSizeOf size_of
@@ -75,6 +76,7 @@ highlight link odinDelete Keyword
 highlight link odinReturn Keyword
 highlight link odinMatch Keyword
 highlight link odinCase Keyword
+highlight link odinDefault Keyword
 highlight link odinProc Keyword
 highlight link odinIn Keyword
 highlight link odinContinue Keyword
