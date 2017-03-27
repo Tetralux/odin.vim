@@ -6,6 +6,7 @@ syntax keyword odinUsing using
 syntax keyword odinNew new
 syntax keyword odinDelete delete
 syntax keyword odinCast cast
+syntax keyword odinVector vector
 
 syntax keyword odinStruct struct
 syntax keyword odinEnum enum
@@ -68,6 +69,7 @@ syntax region odinBlockComment start=/\v\/\*/ end=/\v\*\// contains=odinBlockCom
 highlight link odinUsing Keyword
 highlight link odinNew Keyword
 highlight link odinCast Keyword
+highlight link odinVector Keyword
 highlight link odinDelete Keyword
 highlight link odinReturn Keyword
 highlight link odinMatch Keyword
