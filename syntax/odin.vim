@@ -28,7 +28,7 @@ syntax keyword odinTypeOf type_info
 syntax keyword odinTypeOfVal type_info_of_val
 syntax keyword odinAlignOf align_of
 
-syntax keyword odinDataType void string int float f32 f64 u8 u16 u32 u64 i8 i16 i32 i64 bool rawptr
+syntax keyword odinDataType void string int float byte bool rawptr f32 f64 u8 u16 u32 u64 i8 i16 i32 i64
 syntax keyword odinBool true false
 syntax keyword odinNull nil
 syntax keyword odinDynamic dynamic
