@@ -6,6 +6,7 @@ syntax keyword odinUsing using
 syntax keyword odinNew new
 syntax keyword odinDelete delete
 syntax keyword odinCast cast
+syntax keyword odinCast transmute
 syntax keyword odinUnionCast union_cast
 syntax keyword odinVector vector
 
