@@ -35,6 +35,7 @@ syntax keyword odinNull nil
 syntax keyword odinDynamic dynamic
 syntax keyword odinProc proc
 syntax keyword odinIn in
+syntax keyword odinImmutable immutable
 
 syntax keyword odinReturn return
 syntax keyword odinDefer defer
@@ -89,6 +90,7 @@ highlight link odinSizeOfVal Keyword
 highlight link odinTypeOf Keyword
 highlight link odinTypeOfVal Keyword
 highlight link odinAlignOf Keyword
+highlight link odinImmutable Keyword
 
 highlight link odinDefer Operator
 highlight link odinDynamic Operator
