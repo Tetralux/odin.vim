@@ -53,6 +53,7 @@ syntax match odinTagNote "@\<\w\+\>" display
 syntax match odinClass "\v<[A-Z]\w+>" display
 syntax match odinConstant "\v<[A-Z0-9,_]+>" display
 syntax match odinRange "\.\." display
+syntax match odinHalfRange "\.\.\<" display
 syntax match odinTernaryQMark "?" display
 syntax match odinDeclaration "\:\:\?" display
 syntax match odinDeclAssign ":=" display
@@ -95,6 +96,7 @@ highlight link odinImmutable Keyword
 highlight link odinDefer Operator
 highlight link odinDynamic Operator
 highlight link odinRange Operator
+highlight link odinHalfRange Operator
 highlight link odinAssign Operator
 highlight link odinAddressOf Operator
 
