@@ -13,6 +13,7 @@ syntax keyword odinVector vector
 syntax keyword odinStruct struct
 syntax keyword odinEnum enum
 syntax keyword odinUnion union
+syntax keyword odinBitField bit_field
 
 syntax keyword odinIf if
 syntax keyword odinThen then
@@ -20,7 +21,6 @@ syntax keyword odinElse else
 syntax keyword odinFor for
 syntax keyword odinMatch match
 syntax keyword odinCase case
-syntax keyword odinDefault default
 syntax keyword odinContinue continue
 syntax keyword odinBreak break
 syntax keyword odinSizeOf size_of
@@ -29,7 +29,7 @@ syntax keyword odinTypeOf type_info
 syntax keyword odinTypeOfVal type_info_of_val
 syntax keyword odinAlignOf align_of
 
-syntax keyword odinDataType void string int uint float byte bool rawptr f32 f64 u8 u16 u32 u64 i8 i16 i32 i64
+syntax keyword odinDataType void string int uint float byte bool rune any rawptr f32 f64 u8 u16 u32 u64 u128 i8 i16 i32 i64 i128
 syntax keyword odinBool true false
 syntax keyword odinNull nil
 syntax keyword odinDynamic dynamic
@@ -62,7 +62,8 @@ syntax match odinReturnOp "->" display
 syntax match odinInteger "\-\?\<\d\+\>" display
 syntax match odinFloat "\-\?\<[0-9][0-9_]*\%(\.[0-9][0-9_]*\)\%([eE][+-]\=[0-9_]\+\)\=" display
 syntax match odinHex "\-\?\<0x[0-9A-Fa-f]\+\>" display
-syntax match odinAddressOf "\^" display
+syntax match odinAddressOf "&" display
+syntax match odinDeref "\^" display
 
 syntax match odinMacro "#\<\w\+\>" display
 
@@ -81,7 +82,6 @@ highlight link odinDelete Keyword
 highlight link odinReturn Keyword
 highlight link odinMatch Keyword
 highlight link odinCase Keyword
-highlight link odinDefault Keyword
 highlight link odinProc Keyword
 highlight link odinIn Keyword
 highlight link odinContinue Keyword
@@ -99,6 +99,7 @@ highlight link odinRange Operator
 highlight link odinHalfRange Operator
 highlight link odinAssign Operator
 highlight link odinAddressOf Operator
+highlight link odinDeref Operator
 
 highlight link odinDeclaration Operator
 highlight link odinDeclAssign Operator
@@ -113,6 +114,7 @@ highlight link odinString String
 highlight link odinStruct Structure
 highlight link odinEnum Structure
 highlight link odinUnion Structure
+highlight link odinBitField Structure
 
 highlight link odinFunction Function
 highlight link odinDynamicFunction Function
