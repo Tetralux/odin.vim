@@ -5,9 +5,7 @@ endif
 syntax keyword odinUsing using
 syntax keyword odinNew new
 syntax keyword odinDelete delete
-syntax keyword odinCast cast
-syntax keyword odinCast transmute
-syntax keyword odinUnionCast union_cast
+syntax keyword odinTransmute transmute
 syntax keyword odinVector vector
 
 syntax keyword odinStruct struct
@@ -16,7 +14,6 @@ syntax keyword odinUnion union
 syntax keyword odinBitField bit_field
 
 syntax keyword odinIf if
-syntax keyword odinThen then
 syntax keyword odinElse else
 syntax keyword odinFor for
 syntax keyword odinMatch match
@@ -24,9 +21,7 @@ syntax keyword odinCase case
 syntax keyword odinContinue continue
 syntax keyword odinBreak break
 syntax keyword odinSizeOf size_of
-syntax keyword odinSizeOfVal size_of_val
 syntax keyword odinTypeOf type_info
-syntax keyword odinTypeOfVal type_info_of_val
 syntax keyword odinAlignOf align_of
 
 syntax keyword odinDataType void string int uint float bool rune any rawptr f32 f64 u8 u16 u32 u64 u128 i8 i16 i32 i64 i128
@@ -35,13 +30,17 @@ syntax keyword odinNull nil
 syntax keyword odinDynamic dynamic
 syntax keyword odinProc proc
 syntax keyword odinIn in
-syntax keyword odinImmutable immutable
+syntax keyword odinImport import
+syntax keyword odinImportLoad import_load
+syntax keyword odinForeign foreign
+syntax keyword odinForeignLib foreign_system_library
+syntax keyword odinVar var
+syntax keyword odinConst const
+syntax keyword odinType type
+syntax match odinNoinit "---"
 
 syntax keyword odinReturn return
 syntax keyword odinDefer defer
-
-syntax keyword odinInline inline
-syntax keyword odinNoInline no_inline
 
 syntax region odinString start=/\v"/ skip=/\v\\./ end=/\v"/
 
@@ -75,8 +74,7 @@ syntax region odinBlockComment start=/\v\/\*/ end=/\v\*\// contains=odinBlockCom
 
 highlight link odinUsing Keyword
 highlight link odinNew Keyword
-highlight link odinCast Keyword
-highlight link odinUnionCast Keyword
+highlight link odinTransmute Keyword
 highlight link odinVector Keyword
 highlight link odinDelete Keyword
 highlight link odinReturn Keyword
@@ -87,11 +85,17 @@ highlight link odinIn Keyword
 highlight link odinContinue Keyword
 highlight link odinBreak Keyword
 highlight link odinSizeOf Keyword
-highlight link odinSizeOfVal Keyword
 highlight link odinTypeOf Keyword
-highlight link odinTypeOfVal Keyword
 highlight link odinAlignOf Keyword
-highlight link odinImmutable Keyword
+
+highlight link odinImport Keyword
+highlight link odinImportLoad Keyword
+highlight link odinForeign Keyword
+highlight link odinForeignLib Keyword
+highlight link odinVar Keyword
+highlight link odinConst Keyword
+highlight link odinType Keyword
+highlight link odinNoinit Keyword
 
 highlight link odinDefer Operator
 highlight link odinDynamic Operator
@@ -106,8 +110,6 @@ highlight link odinDeclAssign Operator
 highlight link odinAssign Operator
 highlight link odinTernaryQMark Operator
 highlight link odinReturnOp Operator
-highlight link odinInline Keyword
-highlight link odinNoInline Keyword
 
 highlight link odinString String
 
@@ -121,7 +123,6 @@ highlight link odinDynamicFunction Function
 
 highlight link odinMacro Macro
 highlight link odinIf Conditional
-highlight link odinThen Conditional
 highlight link odinElse Conditional
 highlight link odinFor Repeat
 
