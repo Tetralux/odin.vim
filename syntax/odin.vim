@@ -3,8 +3,6 @@ if exists("b:current_syntax")
 endif
 
 syntax keyword odinUsing using
-syntax keyword odinNew new
-syntax keyword odinDelete delete
 syntax keyword odinTransmute transmute
 syntax keyword odinVector vector
 
@@ -16,27 +14,24 @@ syntax keyword odinBitField bit_field
 syntax keyword odinIf if
 syntax keyword odinElse else
 syntax keyword odinFor for
-syntax keyword odinMatch match
+syntax keyword odinSwitch switch
 syntax keyword odinCase case
 syntax keyword odinContinue continue
 syntax keyword odinBreak break
 syntax keyword odinSizeOf size_of
-syntax keyword odinTypeOf type_info
+syntax keyword odinTypeOf type_info_of
 syntax keyword odinAlignOf align_of
 
-syntax keyword odinDataType void string int uint float bool rune any rawptr f32 f64 u8 u16 u32 u64 u128 i8 i16 i32 i64 i128
+syntax keyword odinDataType string bool rune any rawptr f32 f64 u8 u16 u32 u64 u128 uint i8 i16 i32 i64 i128 int
 syntax keyword odinBool true false
 syntax keyword odinNull nil
 syntax keyword odinDynamic dynamic
 syntax keyword odinProc proc
 syntax keyword odinIn in
 syntax keyword odinImport import
-syntax keyword odinImportLoad import_load
+syntax keyword odinExport export
 syntax keyword odinForeign foreign
-syntax keyword odinForeignLib foreign_system_library
-syntax keyword odinVar var
 syntax keyword odinConst const
-syntax keyword odinType type
 syntax match odinNoinit "---"
 
 syntax keyword odinReturn return
@@ -73,12 +68,10 @@ syntax match odinLineComment "//.*" contains=odinCommentNote
 syntax region odinBlockComment start=/\v\/\*/ end=/\v\*\// contains=odinBlockComment, odinCommentNote
 
 highlight link odinUsing Keyword
-highlight link odinNew Keyword
 highlight link odinTransmute Keyword
 highlight link odinVector Keyword
-highlight link odinDelete Keyword
 highlight link odinReturn Keyword
-highlight link odinMatch Keyword
+highlight link odinSwitch Keyword
 highlight link odinCase Keyword
 highlight link odinProc Keyword
 highlight link odinIn Keyword
@@ -89,12 +82,8 @@ highlight link odinTypeOf Keyword
 highlight link odinAlignOf Keyword
 
 highlight link odinImport Keyword
-highlight link odinImportLoad Keyword
+highlight link odinExport Keyword
 highlight link odinForeign Keyword
-highlight link odinForeignLib Keyword
-highlight link odinVar Keyword
-highlight link odinConst Keyword
-highlight link odinType Keyword
 highlight link odinNoinit Keyword
 
 highlight link odinDefer Operator
