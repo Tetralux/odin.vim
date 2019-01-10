@@ -4,12 +4,14 @@ endif
 
 syntax keyword odinUsing using
 syntax keyword odinTransmute transmute
-syntax keyword odinVector vector
+syntax keyword odinDistinct distinct
+syntax keyword odinOpaque opaque
 
 syntax keyword odinStruct struct
 syntax keyword odinEnum enum
 syntax keyword odinUnion union
 syntax keyword odinBitField bit_field
+syntax keyword odinBitSet bit_set
 
 syntax keyword odinIf if
 syntax keyword odinElse else
@@ -22,7 +24,14 @@ syntax keyword odinSizeOf size_of
 syntax keyword odinTypeOf type_info_of
 syntax keyword odinAlignOf align_of
 
-syntax keyword odinDataType string bool rune any rawptr f32 f64 u8 u16 u32 u64 u128 uint i8 i16 i32 i64 i128 int
+syntax match odinTodo "TODO"
+syntax match odinNote "NOTE"
+syntax match odinXXX "XXX"
+syntax match odinFixMe "FIXME"
+syntax match odinNoCheckin "NOCHECKIN"
+syntax match odinHack "HACK"
+
+syntax keyword odinDataType string bool b8 b16 b32 b64 rune any rawptr f32 f64 u8 u16 u32 u64 u128 uint i8 i16 i32 i64 i128 int
 syntax keyword odinBool true false
 syntax keyword odinNull nil
 syntax keyword odinDynamic dynamic
@@ -64,12 +73,13 @@ syntax match odinMacro "#\<\w\+\>" display
 syntax match odinTemplate "$\<\w\+\>"
 
 syntax match odinCommentNote "@\<\w\+\>" contained display
-syntax match odinLineComment "//.*" contains=odinCommentNote
-syntax region odinBlockComment start=/\v\/\*/ end=/\v\*\// contains=odinBlockComment, odinCommentNote
+syntax region odinLineComment start=/\/\// end=/$/  contains=odinLineComment, odinCommentNote, odinTodo, odinNote, odinXXX, odinFixMe, odinNoCheckin, odinHack
+syntax region odinBlockComment start=/\v\/\*/ end=/\v\*\// contains=odinBlockComment, odinCommentNote, odinTodo, odinNote, odinXXX, odinFixMe, odinNoCheckin, odinHack
 
 highlight link odinUsing Keyword
 highlight link odinTransmute Keyword
-highlight link odinVector Keyword
+highlight link odinDistinct Keyword
+highlight link odinOpaque Keyword
 highlight link odinReturn Keyword
 highlight link odinSwitch Keyword
 highlight link odinCase Keyword
@@ -106,6 +116,7 @@ highlight link odinStruct Structure
 highlight link odinEnum Structure
 highlight link odinUnion Structure
 highlight link odinBitField Structure
+highlight link odinBitSet Structure
 
 highlight link odinFunction Function
 highlight link odinDynamicFunction Function
@@ -118,6 +129,13 @@ highlight link odinFor Repeat
 highlight link odinLineComment Comment
 highlight link odinBlockComment Comment
 highlight link odinCommentNote Todo
+
+highlight link odinTodo Todo
+highlight link odinNote Todo
+highlight link odinXXX Todo
+highlight link odinFixMe Todo
+highlight link odinNoCheckin Todo
+highlight link odinHack Todo
 
 highlight link odinClass Type
 
