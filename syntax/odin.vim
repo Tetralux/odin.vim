@@ -15,6 +15,7 @@ syntax keyword odinBitSet bit_set
 
 syntax keyword odinIf if
 syntax keyword odinElse else
+syntax keyword odinDo do
 syntax keyword odinFor for
 syntax keyword odinSwitch switch
 syntax keyword odinCase case
@@ -37,6 +38,7 @@ syntax keyword odinNull nil
 syntax keyword odinDynamic dynamic
 syntax keyword odinProc proc
 syntax keyword odinIn in
+syntax keyword odinNotIn notin
 syntax keyword odinImport import
 syntax keyword odinExport export
 syntax keyword odinForeign foreign
@@ -85,6 +87,7 @@ highlight link odinSwitch Keyword
 highlight link odinCase Keyword
 highlight link odinProc Keyword
 highlight link odinIn Keyword
+highlight link odinNotIn Keyword
 highlight link odinContinue Keyword
 highlight link odinBreak Keyword
 highlight link odinSizeOf Keyword
@@ -95,6 +98,7 @@ highlight link odinImport Keyword
 highlight link odinExport Keyword
 highlight link odinForeign Keyword
 highlight link odinNoinit Keyword
+highlight link odinDo Keyword
 
 highlight link odinDefer Operator
 highlight link odinDynamic Operator

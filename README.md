@@ -7,7 +7,7 @@ Derived from [jansedivy's jai.vim](https://github.com/jansedivy/jai.vim).
 
 ### Installation
 
-Simply clone the repository into your Vim's package directory.
+Simply clone the repository into your Vim's package directory. (Vim must be installed from https://www.vim.org.)
 If using [Pathogen](https://github.com/tpope/vim-pathogen), clone it into the `bundle` folder within Vim's package directory, instead.
 
 Note that the package directory is located in `%USERPROFILE%\vimfiles` on Windows,
