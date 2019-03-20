@@ -44,6 +44,7 @@ syntax keyword odinExport export
 syntax keyword odinForeign foreign
 syntax keyword odinConst const
 syntax match odinNoinit "---"
+syntax keyword odinPackage package
 
 syntax keyword odinReturn return
 syntax keyword odinDefer defer
@@ -93,6 +94,7 @@ highlight link odinBreak Keyword
 highlight link odinSizeOf Keyword
 highlight link odinTypeOf Keyword
 highlight link odinAlignOf Keyword
+highlight link odinPackage Keyword
 
 highlight link odinImport Keyword
 highlight link odinExport Keyword
