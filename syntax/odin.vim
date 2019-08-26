@@ -32,7 +32,7 @@ syntax match odinFixMe "FIXME"
 syntax match odinNoCheckin "NOCHECKIN"
 syntax match odinHack "HACK"
 
-syntax keyword odinDataType string bool b8 b16 b32 b64 rune any rawptr f32 f64 u8 u16 u32 u64 u128 uint i8 i16 i32 i64 i128 int
+syntax keyword odinDataType string bool b8 b16 b32 b64 rune any rawptr f32 f64 u8 u16 u32 u64 u128 u16le u32le u64le u128le u16be u32be u64be u128be uint i8 i16 i32 i64 i128 i16le i32le i64le i128le i16be i32be i64be i128be int
 syntax keyword odinBool true false
 syntax keyword odinNull nil
 syntax keyword odinDynamic dynamic
@@ -49,6 +49,7 @@ syntax keyword odinPackage package
 syntax keyword odinReturn return
 syntax keyword odinDefer defer
 
+syntax region odinChar start=/\v'/ skip=/\v\\./ end=/\v'/
 syntax region odinString start=/\v"/ skip=/\v\\./ end=/\v"/
 
 syntax match odinFunction "\v<\w*>(\s*::\s*)@="
@@ -117,6 +118,7 @@ highlight link odinTernaryQMark Operator
 highlight link odinReturnOp Operator
 
 highlight link odinString String
+highlight link odinChar String
 
 highlight link odinStruct Structure
 highlight link odinEnum Structure
