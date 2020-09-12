@@ -14,6 +14,7 @@ syntax keyword odinBitField bit_field
 syntax keyword odinBitSet bit_set
 
 syntax keyword odinIf if
+syntax keyword odinWhen when
 syntax keyword odinElse else
 syntax keyword odinDo do
 syntax keyword odinFor for
@@ -136,6 +137,7 @@ highlight link odinDynamicFunction Function
 
 highlight link odinMacro Macro
 highlight link odinIf Conditional
+highlight link odinWhen Conditional
 highlight link odinElse Conditional
 highlight link odinFor Repeat
 
