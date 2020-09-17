@@ -28,6 +28,9 @@ syntax keyword odinTypeIdOf typeid_of
 syntax keyword odinTypeOf type_of
 syntax keyword odinAlignOf align_of
 
+syntax keyword odinInline inline
+syntax keyword odinNoInline no_inline
+
 syntax match odinTodo "TODO"
 syntax match odinNote "NOTE"
 syntax match odinXXX "XXX"
@@ -102,6 +105,9 @@ highlight link odinTypeInfoOf Keyword
 highlight link odinTypeIdOf Keyword
 highlight link odinAlignOf Keyword
 highlight link odinPackage Keyword
+
+highlight link odinInline Keyword
+highlight link odinNoInline Keyword
 
 highlight link odinImport Keyword
 highlight link odinExport Keyword
