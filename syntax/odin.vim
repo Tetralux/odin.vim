@@ -60,8 +60,8 @@ syntax keyword odinDefer defer
 syntax region odinChar start=/\v'/ skip=/\v\\./ end=/\v'/
 syntax region odinString start=/\v"/ skip=/\v\\./ end=/\v"/
 
-syntax match odinFunction "\v<\w*>(\s*::\s*)@="
-syntax match odinDynamicFunction "\v<\w*(\s*:\=\s*\(.*\))@="
+syntax match odinFunction "\v<\w*>(\s*::\sproc*)@="
+syntax match odinDynamicFunction "\v<\w*(\s*:\=\sproc\(.*\))@="
 
 syntax match odinTagNote "@\<\w\+\>" display
 
