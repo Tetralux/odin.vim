@@ -65,7 +65,6 @@ syntax match odinFunction "\v<\w*>(\s*::\s*proc)@="
 
 syntax match odinTagNote "@\<\w\+\>" display
 
-syntax match odinClass "\v<[A-Z]\w+>" display
 syntax match odinConstant "\v<[A-Z0-9,_]+>" display
 syntax match odinRange "\.\." display
 syntax match odinHalfRange "\.\.\<" display
@@ -159,8 +158,6 @@ highlight link odinXXX Todo
 highlight link odinFixMe Todo
 highlight link odinNoCheckin Todo
 highlight link odinHack Todo
-
-highlight link odinClass Type
 
 highlight link odinTemplate Constant
 
