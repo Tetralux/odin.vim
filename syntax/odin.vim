@@ -75,7 +75,11 @@ syntax match odinReturnOp "->" display
 
 syntax match odinInteger "\-\?\<\d\+\>" display
 syntax match odinFloat "\-\?\<[0-9][0-9_]*\%(\.[0-9][0-9_]*\)\%([eE][+-]\=[0-9_]\+\)\=" display
-syntax match odinHex "\-\?\<0x[0-9A-Fa-f]\+\>" display
+syntax match odinHex "\<0[xX][0-9A-Fa-f]\+\>" display
+syntax match odinDoz "\<0[zZ][0-9a-bA-B]\+\>" display
+syntax match odinOct "\<0[oO][0-7]\+\>" display
+syntax match odinBin "\<0[bB][01]\+\>" display
+
 syntax match odinAddressOf "&" display
 syntax match odinDeref "\^" display
 
@@ -169,5 +173,8 @@ highlight link odinNull Type
 highlight link odinInteger Number
 highlight link odinFloat Float
 highlight link odinHex Number
+highlight link odinOct Number
+highlight link odinBin Number
+highlight link odinDoz Number
 
 let b:current_syntax = "odin"
