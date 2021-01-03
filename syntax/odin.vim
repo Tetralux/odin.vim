@@ -4,6 +4,7 @@ endif
 
 syntax keyword odinUsing using
 syntax keyword odinTransmute transmute
+syntax keyword odinCast cast
 syntax keyword odinDistinct distinct
 syntax keyword odinOpaque opaque
 
@@ -89,6 +90,7 @@ syntax region odinBlockComment start=/\v\/\*/ end=/\v\*\// contains=odinBlockCom
 
 highlight link odinUsing Keyword
 highlight link odinTransmute Keyword
+highlight link odinCast Keyword
 highlight link odinDistinct Keyword
 highlight link odinOpaque Keyword
 highlight link odinReturn Keyword
