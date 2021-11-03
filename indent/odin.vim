@@ -6,9 +6,11 @@ let b:did_indent = 1
 setlocal nosmartindent
 setlocal nolisp
 setlocal autoindent
-setlocal cino+=:0
-
 setlocal indentexpr=GetOdinIndent(v:lnum)
+
+if exists("*GetOdinIndent")
+  finish
+endif
 
 function! GetOdinIndent(lnum)
   let prev = prevnonblank(a:lnum-1)
