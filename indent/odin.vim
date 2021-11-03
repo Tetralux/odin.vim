@@ -6,6 +6,7 @@ let b:did_indent = 1
 setlocal nosmartindent
 setlocal nolisp
 setlocal autoindent
+
 setlocal indentexpr=GetOdinIndent(v:lnum)
 
 if exists("*GetOdinIndent")
@@ -28,7 +29,7 @@ function! GetOdinIndent(lnum)
     let ind += &sw
   endif
 
-  " Indent f previous line is a case statement
+  " Indent if previous line is a case statement
   if prevline =~ '^\s*case .*:$'
     let ind += &sw
   endif
