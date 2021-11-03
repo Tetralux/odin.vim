@@ -6,12 +6,9 @@ let b:did_indent = 1
 setlocal nosmartindent
 setlocal nolisp
 setlocal autoindent
+setlocal cino+=:0
 
 setlocal indentexpr=GetOdinIndent(v:lnum)
-
-if exists("*GetOdinIndent")
-  finish
-endif
 
 function! GetOdinIndent(lnum)
   let prev = prevnonblank(a:lnum-1)
@@ -29,8 +26,18 @@ function! GetOdinIndent(lnum)
     let ind += &sw
   endif
 
+  " Indent f previous line is a case statement
+  if prevline =~ '^\s*case .*:$'
+    let ind += &sw
+  endif
+
   if line =~ '^\s*[)}]'
     let ind -= &sw
+  endif
+
+  " Un-indent if current line is a case statement
+  if line =~# '^\s*case .*\:$'
+    let ind -= shiftwidth()
   endif
 
   return ind
