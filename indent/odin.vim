@@ -39,8 +39,8 @@ function! GetOdinIndent(lnum)
   endif
 
   " Un-indent if current line is a case statement
-  if line =~# '^\s*case .*\:$'
-    let ind -= shiftwidth()
+  if line =~ '^\s*case .*\:$'
+    let ind -= &sw
   endif
 
   return ind
