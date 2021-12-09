@@ -60,6 +60,7 @@ syntax keyword odinDefer defer
 
 syntax region odinChar start=/\v'/ skip=/\v\\./ end=/\v'/
 syntax region odinString start=/\v"/ skip=/\v\\./ end=/\v"/
+syntax region odinRawString start=/\v`/ skip=/\v\\./ end=/\v`/
 
 syntax match odinFunction "\v<\w*>(\s*::\s*proc)@="
 
@@ -136,6 +137,7 @@ highlight link odinTernaryQMark Operator
 highlight link odinReturnOp Operator
 
 highlight link odinString String
+highlight link odinRawString String
 highlight link odinChar String
 
 highlight link odinStruct Structure
