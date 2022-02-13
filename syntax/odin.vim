@@ -30,6 +30,9 @@ syntax keyword odinTypeIdOf typeid_of
 syntax keyword odinTypeOf type_of
 syntax keyword odinAlignOf align_of
 
+syntax keyword odinOrReturn or_return
+syntax keyword odinOrElse or_else
+
 syntax keyword odinInline inline
 syntax keyword odinNoInline no_inline
 
@@ -112,6 +115,8 @@ highlight link odinTypeInfoOf Keyword
 highlight link odinTypeIdOf Keyword
 highlight link odinAlignOf Keyword
 highlight link odinPackage Keyword
+highlight link odinOrReturn Keyword
+highlight link odinOrElse Keyword
 
 highlight link odinInline Keyword
 highlight link odinNoInline Keyword
