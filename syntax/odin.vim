@@ -61,9 +61,9 @@ syntax keyword odinPackage package
 syntax keyword odinReturn return
 syntax keyword odinDefer defer
 
-syntax region odinChar start=/\v'/ skip=/\v\\./ end=/\v'/
-syntax region odinString start=/\v"/ skip=/\v\\./ end=/\v"/
-syntax region odinRawString start=/\v`/ skip=/\v\\./ end=/\v`/
+syntax region odinRawString start=+`+ end=+`+
+syntax region odinChar start=+'+ skip=+\\\\\|\\'+ end=+'+
+syntax region odinString start=+"+ skip=+\\\\\|\\'+ end=+"+
 
 syntax match odinFunction "\v<\w*>(\s*::\s*proc)@="
 
