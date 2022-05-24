@@ -92,7 +92,7 @@ syntax match odinMacro "#\<\w\+\>" display
 syntax match odinTemplate "$\<\w\+\>"
 
 syntax match odinCommentNote "@\<\w\+\>" contained display
-syntax region odinLineComment start=/\/\// end=/$/  contains=odinLineComment, odinCommentNote, odinTodo, odinNote, odinXXX, odinFixMe, odinNoCheckin, odinHack
+syntax region odinLineComment start=/\/\// end=/$/  contains=odinCommentNote, odinTodo, odinNote, odinXXX, odinFixMe, odinNoCheckin, odinHack
 syntax region odinBlockComment start=/\v\/\*/ end=/\v\*\// contains=odinBlockComment, odinCommentNote, odinTodo, odinNote, odinXXX, odinFixMe, odinNoCheckin, odinHack
 
 highlight link odinUsing Keyword
