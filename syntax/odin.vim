@@ -62,10 +62,11 @@ syntax keyword odinReturn return
 syntax keyword odinDefer defer
 
 syntax region odinRawString start=+`+ end=+`+
-syntax region odinChar start=+'+ skip=+\\\\\|\\'+ end=+'+
-syntax region odinString start=+"+ skip=+\\\\\|\\'+ end=+"+
+syntax region odinChar start=+'+ skip=+\\\\\|\\\|\\"'+ end=+'+
+syntax region odinString start=+"+ skip=+\\\\\|\\'\|\\"+ end=+"+
 
 syntax match odinFunction "\v<\w*>(\s*::\s*proc)@="
+syntax match odinProcCall "\zs\(\k\w*\)*\s*\ze("
 
 syntax match odinTagNote "@\<\w\+\>" display
 
@@ -152,6 +153,7 @@ highlight link odinBitField Structure
 highlight link odinBitSet Structure
 
 highlight link odinFunction Function
+highlight link odinProcCall Function
 
 highlight link odinMacro Macro
 highlight link odinIf Conditional
