@@ -62,7 +62,7 @@ syntax keyword odinReturn return
 syntax keyword odinDefer defer
 
 syntax region odinRawString start=+`+ end=+`+
-syntax region odinChar start=+'+ skip=+\\\\\|\\\|\\"'+ end=+'+
+syntax region odinChar start=+'+ skip=+\\\\\|\\'\|\\"+ end=+'+
 syntax region odinString start=+"+ skip=+\\\\\|\\'\|\\"+ end=+"+
 
 syntax match odinFunction "\v<\w*>(\s*::\s*proc)@="
