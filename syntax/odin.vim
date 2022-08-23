@@ -7,6 +7,7 @@ syntax keyword odinTransmute transmute
 syntax keyword odinCast cast
 syntax keyword odinDistinct distinct
 syntax keyword odinOpaque opaque
+syntax keyword odinWhere where
 
 syntax keyword odinStruct struct
 syntax keyword odinEnum enum
@@ -118,6 +119,7 @@ highlight link odinAlignOf Keyword
 highlight link odinPackage Keyword
 highlight link odinOrReturn Keyword
 highlight link odinOrElse Keyword
+highlight link odinWhere Keyword
 
 highlight link odinInline Keyword
 highlight link odinNoInline Keyword
