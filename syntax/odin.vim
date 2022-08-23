@@ -47,6 +47,7 @@ syntax keyword odinDataType string cstring bool b8 b16 b32 b64 rune any rawptr f
 syntax keyword odinBool true false
 syntax keyword odinNull nil
 syntax keyword odinDynamic dynamic
+syntax keyword odinMap map
 syntax keyword odinProc proc
 syntax keyword odinIn in
 syntax keyword odinNotIn notin
@@ -129,6 +130,7 @@ highlight link odinDo Keyword
 
 highlight link odinDefer Operator
 highlight link odinDynamic Operator
+highlight link odinMap Operator
 highlight link odinRange Operator
 highlight link odinHalfRange Operator
 highlight link odinAssign Operator
