@@ -65,7 +65,8 @@ syntax keyword odinDefer defer
 
 syntax region odinRawString start=+`+ end=+`+
 syntax region odinChar start=+'+ skip=+\\\\\|\\'+ end=+'+
-syntax region odinString start=+"+ skip=+\\\\\|\\'+ end=+"+
+syntax region odinString start=+"+ skip=+\\\\\|\\'+ end=+"+ contains=odinEscape
+syntax match odinEscape display contained /\\\([nrt\\'"]\|x\x\{2}\)/
 
 syntax match odinFunction "\v<\w*>(\s*::\s*proc)@="
 
