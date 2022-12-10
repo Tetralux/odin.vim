@@ -61,7 +61,7 @@ syntax region odinChar start=/\v'/ skip=/\v\\./ end=/\v'/
 syntax region odinString start=/\v"/ skip=/\v\\./ end=/\v"/
 
 syntax match odinFunctionDecl "\v<\w*>(\s*::\s*proc)@="
-syntax match odinFunctionCall    "\w\(\w\)*("he=e-1,me=e-1
+syntax match odinFunctionCall "\v\w+\s*(\()@="
 
 syntax match odinTagNote "@\<\w\+\>" display
 
