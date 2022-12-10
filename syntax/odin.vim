@@ -140,6 +140,7 @@ highlight link odinUnion Structure
 highlight link odinBitField Structure
 highlight link odinBitSet Structure
 
+" :FunctionHighlighting
 highlight link odinFunctionDecl Function
 highlight link odinFunctionCall Function
 
