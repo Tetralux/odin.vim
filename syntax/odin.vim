@@ -70,7 +70,7 @@ syntax keyword odinReturn return
 syntax keyword odinDefer defer
 
 syntax region odinRawString start=+`+ end=+`+
-syntax region odinChar start=+'+ skip=+\\\\\|\\'+ end=+'+
+syntax region odinCharacter start=+'+ skip=+\\\\\|\\'+ end=+'+
 syntax region odinString start=+"+ skip=+\\\\\|\\'+ end=+"+ contains=odinEscape
 syntax match odinEscape display contained /\\\([nrt\\'"]\|x\x\{2}\)/
 
@@ -161,7 +161,7 @@ highlight link odinReturnOp Operator
 
 highlight link odinString String
 highlight link odinRawString String
-highlight link odinChar String
+highlight link odinCharacter String
 
 highlight link odinStruct Structure
 highlight link odinEnum Structure
